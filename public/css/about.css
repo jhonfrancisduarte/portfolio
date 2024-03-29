@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#aboutme-content{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+#aboutme-content h2{
+    color: #d2ffff;
+}
+
+.personal-data, 
+.my-skills,
+.my-experience{
+    position: absolute;
+    top: 0; 
+    left: -500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    transition: .4s ease-out;
+    opacity: 0;
+    z-index: 10;
+}
+
+.personal-data.active,
+.my-skills.active,
+.my-experience.active{
+    position: absolute;
+    top: 0;
+    left: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    opacity: 1;
+}
+
+.p-data-content h4 span{
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.p-data-content{
+    width: 400px;
+    font-size: 14px;
+}
+
+#aboutme-content .p{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+#aboutme-content .p-skills{
+    letter-spacing: 3px;
+    margin-top: -15px;
+}
+
+#aboutme-content .p-exp{
+    letter-spacing: 3px;
+    margin-top: -5px;
+}
+
+.exp-comp-web{
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+.exp-comp-web a{
+    color: #009292;
+}
+
+.exp-comp-web a:hover{
+    color: #a4ffc7;
+}
+
+.exp-line{
+    width: 310px;
+    height: 2px;
+    background-color: grey;
+}
+
+#aboutme-content .p-skills span{
+    cursor: pointer;
+}
+
+.sub-header{
+    color: #e9ffff;
+    font-weight: 500;
+}
+
+.closeThis{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.closeThis:hover{
+    color: #009292;
+}
+
+
+.meter-holder {
+    position: relative;
+    width: 400px;
+    height: 5px; 
+    border-radius: 10px;
+    margin-top: -20px;
+}
+
+.meter-bg {
+    position: absolute; top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #009292;
+    opacity: 0.2;
+    border-radius: 10px;
+}
+
+.meter-fill {
+    position: absolute; top: 0; left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #0bb3b3; 
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+  
+
+/* ------------------------Mobile View---------------------- */
+
+@media (max-width: 768px){
+    #about-me{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .personal-data, 
+    .my-skills,
+    .my-experience{
+        display: flex;
+        align-items: start !important;
+        justify-content: center;
+        height: 100%;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .personal-data.active,
+    .my-skills.active,
+    .my-experience.active{
+        width: 100vw;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .p-data-content,
+    .my-skills-content{
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .meter-holder{
+        width: 100%;
+    }
+}
